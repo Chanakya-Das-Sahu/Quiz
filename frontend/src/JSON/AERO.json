@@ -1,0 +1,272 @@
+[
+    {
+        "question": "What is the primary force that opposes the motion of an aircraft through the air?",
+        "options": {
+            "A": "Lift",
+            "B": "Thrust",
+            "C": "Drag",
+            "D": "Gravity"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which of the following is NOT a primary flight control surface?",
+        "options": {
+            "A": "Aileron",
+            "B": "Elevator",
+            "C": "Flap",
+            "D": "Rudder"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the purpose of winglets on an aircraft?",
+        "options": {
+            "A": "Increase thrust",
+            "B": "Reduce drag",
+            "C": "Improve landing stability",
+            "D": "Decrease fuel consumption"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which law of motion explains the principle of jet propulsion?",
+        "options": {
+            "A": "Newton's First Law",
+            "B": "Newton's Second Law",
+            "C": "Newton's Third Law",
+            "D": "Law of Conservation of Mass"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which component of an aircraft controls roll?",
+        "options": {
+            "A": "Rudder",
+            "B": "Elevator",
+            "C": "Flaps",
+            "D": "Ailerons"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "What is the main purpose of an aircraft’s landing gear?",
+        "options": {
+            "A": "Control altitude",
+            "B": "Provide stability in the air",
+            "C": "Absorb impact during landing",
+            "D": "Increase lift"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What does 'Mach 1' represent?",
+        "options": {
+            "A": "The speed of light",
+            "B": "The speed of sound",
+            "C": "The maximum speed of an aircraft",
+            "D": "The minimum takeoff speed"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of engine is commonly used in commercial jet airliners?",
+        "options": {
+            "A": "Piston engine",
+            "B": "Turbojet engine",
+            "C": "Turbofan engine",
+            "D": "Ramjet engine"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which aerodynamic force is responsible for keeping an aircraft in the air?",
+        "options": {
+            "A": "Thrust",
+            "B": "Drag",
+            "C": "Lift",
+            "D": "Gravity"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the main function of an aircraft's horizontal stabilizer?",
+        "options": {
+            "A": "Control roll",
+            "B": "Control pitch",
+            "C": "Control yaw",
+            "D": "Increase speed"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of flow occurs when air moves smoothly over an aircraft’s surface?",
+        "options": {
+            "A": "Turbulent flow",
+            "B": "Laminar flow",
+            "C": "Shock wave",
+            "D": "Vortex flow"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What happens when an aircraft exceeds the critical angle of attack?",
+        "options": {
+            "A": "Increases lift",
+            "B": "Enters a stall",
+            "C": "Increases speed",
+            "D": "Reduces drag"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which of these is NOT a type of drag?",
+        "options": {
+            "A": "Parasitic drag",
+            "B": "Induced drag",
+            "C": "Wave drag",
+            "D": "Lift drag"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "What is the primary function of a jet engine’s compressor?",
+        "options": {
+            "A": "Compress air before combustion",
+            "B": "Increase thrust",
+            "C": "Generate lift",
+            "D": "Cool down the engine"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which flight instrument measures altitude?",
+        "options": {
+            "A": "Airspeed Indicator",
+            "B": "Altimeter",
+            "C": "Vertical Speed Indicator",
+            "D": "Heading Indicator"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which fuel is commonly used in jet engines?",
+        "options": {
+            "A": "Diesel",
+            "B": "Gasoline",
+            "C": "Jet A1",
+            "D": "Ethanol"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the function of an aircraft’s rudder?",
+        "options": {
+            "A": "Control roll",
+            "B": "Control pitch",
+            "C": "Control yaw",
+            "D": "Increase speed"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which part of a jet engine burns fuel to generate thrust?",
+        "options": {
+            "A": "Compressor",
+            "B": "Turbine",
+            "C": "Combustion chamber",
+            "D": "Exhaust nozzle"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the primary function of a vortex generator on an aircraft?",
+        "options": {
+            "A": "Reduce drag",
+            "B": "Increase lift",
+            "C": "Delay boundary layer separation",
+            "D": "Improve fuel efficiency"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the purpose of a canard in aircraft design?",
+        "options": {
+            "A": "Reduce drag",
+            "B": "Increase stability",
+            "C": "Improve lift",
+            "D": "Enhance maneuverability"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "What is the role of a flight data recorder?",
+        "options": {
+            "A": "Record pilot communications",
+            "B": "Monitor aircraft systems",
+            "C": "Analyze flight performance",
+            "D": "All of the above"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "What is the main cause of a sonic boom?",
+        "options": {
+            "A": "Rapid altitude change",
+            "B": "Crossing the speed of sound",
+            "C": "High turbulence",
+            "D": "Engine failure"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which material is commonly used in modern aircraft structures?",
+        "options": {
+            "A": "Aluminum alloy",
+            "B": "Wood",
+            "C": "Iron",
+            "D": "Titanium"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What type of stability ensures an aircraft returns to its original flight path after a disturbance?",
+        "options": {
+            "A": "Positive stability",
+            "B": "Negative stability",
+            "C": "Neutral stability",
+            "D": "Dynamic stability"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which control surface increases lift during takeoff and landing?",
+        "options": {
+            "A": "Rudder",
+            "B": "Flaps",
+            "C": "Elevators",
+            "D": "Slats"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which factor primarily affects an aircraft’s lift?",
+        "options": {
+            "A": "Weight",
+            "B": "Altitude",
+            "C": "Angle of attack",
+            "D": "Temperature"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which term refers to an aircraft's ability to maintain level flight without pilot input?",
+        "options": {
+            "A": "Maneuverability",
+            "B": "Stability",
+            "C": "Drag",
+            "D": "Lift"
+        },
+        "answer": "B"
+    }
+]

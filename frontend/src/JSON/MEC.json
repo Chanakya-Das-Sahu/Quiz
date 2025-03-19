@@ -1,0 +1,262 @@
+[
+    {
+        "question": "Which law of thermodynamics states that energy cannot be created or destroyed?",
+        "options": {
+            "A": "First Law",
+            "B": "Second Law",
+            "C": "Third Law",
+            "D": "Zeroth Law"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which cycle is used in modern gas turbines?",
+        "options": {
+            "A": "Otto Cycle",
+            "B": "Diesel Cycle",
+            "C": "Brayton Cycle",
+            "D": "Rankine Cycle"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the SI unit of pressure?",
+        "options": {
+            "A": "Pascal",
+            "B": "Newton",
+            "C": "Joule",
+            "D": "Watt"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which material is commonly used for making gears?",
+        "options": {
+            "A": "Aluminum",
+            "B": "Cast Iron",
+            "C": "Copper",
+            "D": "Rubber"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of bearing is used to support radial loads?",
+        "options": {
+            "A": "Thrust bearing",
+            "B": "Ball bearing",
+            "C": "Roller bearing",
+            "D": "Magnetic bearing"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the purpose of a flywheel?",
+        "options": {
+            "A": "Store energy",
+            "B": "Increase torque",
+            "C": "Reduce friction",
+            "D": "Increase speed"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which process is used to harden the surface of steel?",
+        "options": {
+            "A": "Annealing",
+            "B": "Carburizing",
+            "C": "Tempering",
+            "D": "Normalizing"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of welding uses a non-consumable electrode?",
+        "options": {
+            "A": "MIG welding",
+            "B": "TIG welding",
+            "C": "Arc welding",
+            "D": "Spot welding"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of fluid flow has no turbulence?",
+        "options": {
+            "A": "Laminar flow",
+            "B": "Turbulent flow",
+            "C": "Steady flow",
+            "D": "Unsteady flow"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is the function of a governor in an engine?",
+        "options": {
+            "A": "Increase speed",
+            "B": "Control fuel supply",
+            "C": "Regulate engine speed",
+            "D": "Reduce noise"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which part of an IC engine converts linear motion into rotary motion?",
+        "options": {
+            "A": "Piston",
+            "B": "Crankshaft",
+            "C": "Connecting rod",
+            "D": "Camshaft"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the efficiency of an ideal Carnot engine dependent on?",
+        "options": {
+            "A": "Compression ratio",
+            "B": "Heat input",
+            "C": "Temperature difference",
+            "D": "Volume ratio"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which law states that the sum of forces in a static system is zero?",
+        "options": {
+            "A": "Newton's First Law",
+            "B": "D'Alembert's Principle",
+            "C": "Law of Equilibrium",
+            "D": "Law of Conservation of Energy"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which of the following is NOT a type of heat exchanger?",
+        "options": {
+            "A": "Shell and tube",
+            "B": "Plate",
+            "C": "Reciprocating",
+            "D": "Finned tube"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the main function of a condenser in a steam power plant?",
+        "options": {
+            "A": "Increase temperature",
+            "B": "Convert steam into water",
+            "C": "Reduce pressure",
+            "D": "Increase pressure"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the function of a cam in an engine?",
+        "options": {
+            "A": "Open and close valves",
+            "B": "Convert heat to energy",
+            "C": "Store fuel",
+            "D": "Reduce vibration"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which instrument is used to measure torque?",
+        "options": {
+            "A": "Dynamometer",
+            "B": "Tachometer",
+            "C": "Manometer",
+            "D": "Barometer"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which law of thermodynamics defines entropy?",
+        "options": {
+            "A": "First Law",
+            "B": "Second Law",
+            "C": "Third Law",
+            "D": "Zeroth Law"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which part of an engine is responsible for air-fuel mixing?",
+        "options": {
+            "A": "Cylinder",
+            "B": "Piston",
+            "C": "Carburetor",
+            "D": "Crankshaft"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What type of lubrication system is used in two-stroke engines?",
+        "options": {
+            "A": "Wet sump",
+            "B": "Dry sump",
+            "C": "Splash lubrication",
+            "D": "Mixed lubrication"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "Which type of stress occurs when an object is twisted?",
+        "options": {
+            "A": "Tensile stress",
+            "B": "Compressive stress",
+            "C": "Torsional stress",
+            "D": "Shear stress"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which component is used to transfer power in belt drives?",
+        "options": {
+            "A": "Gear",
+            "B": "Pulley",
+            "C": "Spring",
+            "D": "Flywheel"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which device is used to measure velocity of fluid?",
+        "options": {
+            "A": "Manometer",
+            "B": "Pitot tube",
+            "C": "Thermometer",
+            "D": "Tachometer"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the function of a radiator in an automobile?",
+        "options": {
+            "A": "Store fuel",
+            "B": "Cool engine",
+            "C": "Increase power",
+            "D": "Reduce emissions"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What type of pump is used for lifting water in deep wells?",
+        "options": {
+            "A": "Centrifugal pump",
+            "B": "Reciprocating pump",
+            "C": "Jet pump",
+            "D": "Screw pump"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which principle is used in the working of a hydraulic press?",
+        "options": {
+            "A": "Pascal’s Law",
+            "B": "Bernoulli’s Principle",
+            "C": "Newton’s Second Law",
+            "D": "Archimedes’ Principle"
+        },
+        "answer": "A"
+    }
+]

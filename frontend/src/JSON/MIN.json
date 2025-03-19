@@ -1,0 +1,212 @@
+[
+    {
+        "question": "What is the primary method used for underground coal mining?",
+        "options": {
+            "A": "Open-pit mining",
+            "B": "Strip mining",
+            "C": "Room and pillar mining",
+            "D": "Dredging"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which mineral is extracted from bauxite ore?",
+        "options": {
+            "A": "Iron",
+            "B": "Aluminum",
+            "C": "Copper",
+            "D": "Zinc"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the main explosive used in modern mining operations?",
+        "options": {
+            "A": "TNT",
+            "B": "Dynamite",
+            "C": "Ammonium Nitrate-Fuel Oil (ANFO)",
+            "D": "Gunpowder"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which mining method is used for extracting minerals from riverbeds?",
+        "options": {
+            "A": "Room and pillar mining",
+            "B": "Placer mining",
+            "C": "Block caving",
+            "D": "Solution mining"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which equipment is commonly used in surface mining for removing overburden?",
+        "options": {
+            "A": "Continuous miner",
+            "B": "Dragline excavator",
+            "C": "Longwall shearer",
+            "D": "Jackhammer"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What does the term ‘overburden’ refer to in mining?",
+        "options": {
+            "A": "A high-grade ore body",
+            "B": "Waste material covering a mineral deposit",
+            "C": "A geological fault",
+            "D": "A type of underground support"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the purpose of ventilation in underground mines?",
+        "options": {
+            "A": "To cool mining equipment",
+            "B": "To remove dust and gases",
+            "C": "To improve drilling efficiency",
+            "D": "To reduce ore dilution"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which of the following is NOT a type of underground mining method?",
+        "options": {
+            "A": "Longwall mining",
+            "B": "Cut and fill mining",
+            "C": "Hydraulic mining",
+            "D": "Sublevel stoping"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which chemical element is most commonly extracted from coal?",
+        "options": {
+            "A": "Carbon",
+            "B": "Iron",
+            "C": "Silicon",
+            "D": "Aluminum"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is the primary purpose of mine reclamation?",
+        "options": {
+            "A": "To increase mineral extraction efficiency",
+            "B": "To restore land after mining activities",
+            "C": "To improve mining safety",
+            "D": "To increase ore grade"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which rock type is most commonly associated with coal deposits?",
+        "options": {
+            "A": "Igneous rock",
+            "B": "Sedimentary rock",
+            "C": "Metamorphic rock",
+            "D": "Volcanic rock"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is a common method of preventing mine subsidence?",
+        "options": {
+            "A": "Backfilling",
+            "B": "Hydraulic fracturing",
+            "C": "Leaching",
+            "D": "Solution mining"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which gas is a major concern in coal mines due to its explosiveness?",
+        "options": {
+            "A": "Oxygen",
+            "B": "Methane",
+            "C": "Nitrogen",
+            "D": "Carbon dioxide"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the main role of a flotation process in mineral processing?",
+        "options": {
+            "A": "Crushing ore",
+            "B": "Separating valuable minerals from waste",
+            "C": "Heating minerals",
+            "D": "Transporting minerals"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of mining is commonly used for extracting gold from placer deposits?",
+        "options": {
+            "A": "Strip mining",
+            "B": "Dredging",
+            "C": "Room and pillar mining",
+            "D": "Solution mining"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which device is used to measure seismic activity in mines?",
+        "options": {
+            "A": "Tachometer",
+            "B": "Seismograph",
+            "C": "Thermometer",
+            "D": "Dynamometer"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which element is primarily extracted from uranium ore?",
+        "options": {
+            "A": "Plutonium",
+            "B": "Thorium",
+            "C": "Uranium",
+            "D": "Mercury"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the main disadvantage of open-pit mining?",
+        "options": {
+            "A": "Lower extraction rate",
+            "B": "Higher operational cost",
+            "C": "Significant environmental impact",
+            "D": "Requires underground tunnels"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the purpose of using a blasting cap in mining?",
+        "options": {
+            "A": "To detect minerals",
+            "B": "To measure air quality",
+            "C": "To initiate explosives",
+            "D": "To transport ore"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which factor most influences the choice between surface and underground mining?",
+        "options": {
+            "A": "Mineral composition",
+            "B": "Depth of the mineral deposit",
+            "C": "Market demand",
+            "D": "Processing method"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is a common byproduct of gold mining that poses environmental hazards?",
+        "options": {
+            "A": "Sulfur dioxide",
+            "B": "Cyanide",
+            "C": "Ozone",
+            "D": "Barium"
+        },
+        "answer": "B"
+    }
+]

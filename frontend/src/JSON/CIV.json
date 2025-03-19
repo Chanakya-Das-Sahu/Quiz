@@ -1,0 +1,242 @@
+[
+    {
+        "question": "What is the primary binding material in concrete?",
+        "options": {
+            "A": "Sand",
+            "B": "Cement",
+            "C": "Gravel",
+            "D": "Water"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of foundation is most suitable for weak soil conditions?",
+        "options": {
+            "A": "Strip footing",
+            "B": "Raft foundation",
+            "C": "Pile foundation",
+            "D": "Pad foundation"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which test is used to determine the workability of concrete?",
+        "options": {
+            "A": "Compression test",
+            "B": "Slump test",
+            "C": "Tensile test",
+            "D": "Impact test"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the standard unit of measurement for the strength of concrete?",
+        "options": {
+            "A": "Newton",
+            "B": "Pascal",
+            "C": "Megapascal (MPa)",
+            "D": "Kilogram"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which type of cement is best for underwater construction?",
+        "options": {
+            "A": "Ordinary Portland Cement",
+            "B": "Rapid Hardening Cement",
+            "C": "Sulphate Resistant Cement",
+            "D": "Hydraulic Cement"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "Which material is commonly used for road pavement?",
+        "options": {
+            "A": "Concrete",
+            "B": "Bitumen",
+            "C": "Steel",
+            "D": "Clay"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What does the term 'Superstructure' refer to in building construction?",
+        "options": {
+            "A": "Foundation",
+            "B": "Structural elements above ground level",
+            "C": "Soil layers",
+            "D": "Subsurface drainage"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which instrument is used to measure angles in land surveying?",
+        "options": {
+            "A": "Theodolite",
+            "B": "Planimeter",
+            "C": "Barometer",
+            "D": "Tachometer"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is the main purpose of reinforcement in concrete structures?",
+        "options": {
+            "A": "Increase weight",
+            "B": "Improve durability",
+            "C": "Resist tensile forces",
+            "D": "Reduce cost"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which of the following is NOT a type of retaining wall?",
+        "options": {
+            "A": "Gravity wall",
+            "B": "Cantilever wall",
+            "C": "Buttress wall",
+            "D": "Partition wall"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "Which of the following tests is used to determine soil bearing capacity?",
+        "options": {
+            "A": "Proctor test",
+            "B": "Standard Penetration Test (SPT)",
+            "C": "Atterberg limits test",
+            "D": "California Bearing Ratio (CBR) test"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of bridge has cables supporting the deck?",
+        "options": {
+            "A": "Arch bridge",
+            "B": "Suspension bridge",
+            "C": "Truss bridge",
+            "D": "Cantilever bridge"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which factor most affects the shear strength of soil?",
+        "options": {
+            "A": "Density",
+            "B": "Moisture content",
+            "C": "Plasticity index",
+            "D": "Grain size distribution"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the primary purpose of a culvert?",
+        "options": {
+            "A": "Drain water under a road",
+            "B": "Support bridge structures",
+            "C": "Store construction materials",
+            "D": "Control air circulation"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is the typical lifespan of reinforced concrete structures?",
+        "options": {
+            "A": "5-10 years",
+            "B": "20-30 years",
+            "C": "50-100 years",
+            "D": "200-300 years"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which type of masonry bond is the strongest?",
+        "options": {
+            "A": "Stretcher bond",
+            "B": "English bond",
+            "C": "Header bond",
+            "D": "Flemish bond"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which property of steel makes it suitable for reinforcement in concrete?",
+        "options": {
+            "A": "High compressive strength",
+            "B": "High tensile strength",
+            "C": "Low weight",
+            "D": "Brittleness"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which of the following is a non-destructive test for concrete strength?",
+        "options": {
+            "A": "Compressive strength test",
+            "B": "Rebound hammer test",
+            "C": "Split tensile test",
+            "D": "Flexural test"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which law governs the flow of water through soil?",
+        "options": {
+            "A": "Hooke's Law",
+            "B": "Darcy's Law",
+            "C": "Bernoulli's Principle",
+            "D": "Pascal’s Law"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the role of admixtures in concrete?",
+        "options": {
+            "A": "Increase cost",
+            "B": "Improve workability and strength",
+            "C": "Reduce cement content",
+            "D": "Increase density"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of dam is constructed using compacted earth?",
+        "options": {
+            "A": "Gravity dam",
+            "B": "Earth-fill dam",
+            "C": "Arch dam",
+            "D": "Buttress dam"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the minimum curing period for concrete as per IS 456?",
+        "options": {
+            "A": "3 days",
+            "B": "7 days",
+            "C": "14 days",
+            "D": "28 days"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of pile is used when the soil is very soft?",
+        "options": {
+            "A": "End bearing pile",
+            "B": "Friction pile",
+            "C": "Sheet pile",
+            "D": "Concrete pile"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which factor is most important in road pavement design?",
+        "options": {
+            "A": "Air temperature",
+            "B": "Traffic load",
+            "C": "Rainfall",
+            "D": "Soil color"
+        },
+        "answer": "B"
+    }
+]

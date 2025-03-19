@@ -1,0 +1,152 @@
+[
+    {
+      "question": "What is the time complexity of binary search in a sorted array?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(log n)",
+        "C": "O(n log n)",
+        "D": "O(1)"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which data structure is used for implementing recursion?",
+      "options": {
+        "A": "Queue",
+        "B": "Stack",
+        "C": "Linked List",
+        "D": "Array"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following sorting algorithms has the best average-case time complexity?",
+      "options": {
+        "A": "Bubble Sort",
+        "B": "Insertion Sort",
+        "C": "Merge Sort",
+        "D": "Selection Sort"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following is not an OOP principle?",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Polymorphism",
+        "C": "Abstraction",
+        "D": "Compilation"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "Which protocol is used for secure communication over the Internet?",
+      "options": {
+        "A": "HTTP",
+        "B": "FTP",
+        "C": "SSL/TLS",
+        "D": "SMTP"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "What is the primary purpose of an operating system?",
+      "options": {
+        "A": "To execute applications",
+        "B": "To manage system resources",
+        "C": "To provide security",
+        "D": "To compile programs"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which data structure is most efficient for implementing a priority queue?",
+      "options": {
+        "A": "Stack",
+        "B": "Queue",
+        "C": "Heap",
+        "D": "Linked List"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which SQL statement is used to retrieve data from a database?",
+      "options": {
+        "A": "SELECT",
+        "B": "INSERT",
+        "C": "UPDATE",
+        "D": "DELETE"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Which of the following is a NoSQL database?",
+      "options": {
+        "A": "MySQL",
+        "B": "MongoDB",
+        "C": "PostgreSQL",
+        "D": "Oracle"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "What does the acronym 'JSON' stand for?",
+      "options": {
+        "A": "Java Standard Object Notation",
+        "B": "JavaScript Object Notation",
+        "C": "Java System Object Notation",
+        "D": "Java Serialized Object Notation"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which of the following is not a valid JavaScript data type?",
+      "options": {
+        "A": "Number",
+        "B": "Boolean",
+        "C": "Float",
+        "D": "String"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which of these is not a valid HTTP method?",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "FETCH",
+        "D": "DELETE"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which of these is a valid way to declare a variable in JavaScript?",
+      "options": {
+        "A": "var x = 5;",
+        "B": "let x = 5;",
+        "C": "const x = 5;",
+        "D": "All of the above"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "Which of these is not a Python data type?",
+      "options": {
+        "A": "List",
+        "B": "Tuple",
+        "C": "Dictionary",
+        "D": "Array"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "Which algorithm is used in public-key cryptography?",
+      "options": {
+        "A": "AES",
+        "B": "RSA",
+        "C": "SHA",
+        "D": "MD5"
+      },
+      "answer": "B"
+    }
+  ]
