@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { context } from "../App";
 
 const Register = () => {
+    
     const [details, setDetails] = useState({
         name: "",
         rollno: "",
@@ -35,12 +36,16 @@ const Register = () => {
             alert("Please fill all fields");
             return;
         }
+        details.rollno = details.rollno.toUpperCase();
 
         let regex = /^MU\d{2}BT([A-Za-z]+)H?\d{3}$/;
-        let match = rollno.match(regex);
-        const branchName = match ? match[1].replace(/H$/, '') : rollno;
-        const branch = branchName.toUpperCase();
-        // const branch = details.rollno.slice(6, 9).toUpperCase();
+        let match = details.rollno.match(regex);
+           console.log('details.rollno',match[1])
+        // return ;
+
+        const branch = match[1] ? match[1].replace(/H$/, '') : null;
+        // const branch = branch.toUpperCase();
+        // console.log('branch',branch)
         setDetails((prev) => ({ ...prev, branch }));
         setLoading(true);
 
@@ -57,6 +62,7 @@ const Register = () => {
 
     const handleSubmit = () => {
         if (otp.generated === otp.input) {
+            details.rollno = details.rollno.toUpperCase();
             localStorage.setItem("auth86", details.branch);
             localStorage.setItem('details', JSON.stringify(details))
             // alert("Registration successful");

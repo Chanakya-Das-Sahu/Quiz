@@ -1,0 +1,55 @@
+ const requestFullScreen = () => {
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+            document.documentElement.msRequestFullscreen();
+        }
+    };
+
+    // Detect full-screen exit and auto-submit
+    const handleFullScreenChange = () => {
+        if (!document.fullscreenElement) {
+            alert("You exited full-screen! Quiz will be submitted.");
+            setShowSubmittedPage(true);
+        }
+    };
+
+    // Detect tab switch or window blur
+    const handleVisibilityChange = () => {
+        if (document.hidden) {
+            alert("Tab switch detected! Quiz will be submitted.");
+            setShowSubmittedPage(true);
+        }
+    };
+
+    // Disable right-click and DevTools
+    const preventCheating = (e) => {
+        e.preventDefault();
+        alert("Right-click is disabled!");
+    };
+
+    const preventDevTools = (e) => {
+        if (e.key === "F12" || (e.ctrlKey && e.key === "u")) {
+            e.preventDefault();
+            alert("DevTools are disabled!");
+        }
+    };
+
+    useEffect(() => {
+        requestFullScreen(); // Open full-screen on mount
+        document.addEventListener("fullscreenchange", handleFullScreenChange);
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+        document.addEventListener("contextmenu", preventCheating);
+        document.addEventListener("keydown", preventDevTools);
+
+        return () => {
+            document.removeEventListener("fullscreenchange", handleFullScreenChange);
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+            document.removeEventListener("contextmenu", preventCheating);
+            document.removeEventListener("keydown", preventDevTools);
+        };
+    }, []);

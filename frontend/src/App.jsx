@@ -32,9 +32,9 @@ const App = () => {
 
   useEffect(() => {
     const quizTime = new Date();
-    quizTime.setHours(14, 51 ,10, 0);
+    quizTime.setHours(19,54 ,0, 0);
 
-    const leaderBoardTime = new Date(quizTime.getTime() + 10 * 60 * 1000);
+    const leaderBoardTime = new Date(quizTime.getTime() + 60 * 60 * 1000);
     setLeaderBoardTiming(leaderBoardTime)
     setTiming(quizTime)
 
@@ -45,7 +45,7 @@ const App = () => {
       }
 
       if (now >= leaderBoardTime) {
-        // setShowSubmittedPage(true)
+        setShowSubmittedPage(true)
         clearInterval(interval)
       }
 

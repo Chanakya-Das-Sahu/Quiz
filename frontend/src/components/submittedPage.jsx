@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useContext, useState } from 'react'
 import { context } from '../App'
 import LeaderBoard from './leaderBoard'
+import axios from 'axios'
 
 const SubmittedPage = () => {
     const [time, setTime] = useState('')
@@ -11,6 +12,15 @@ const SubmittedPage = () => {
     const [mark, setMark] = useState(0)
 
     useEffect(() => {
+
+        const handleDetails = async () => {
+            if(sessionStorage.getItem('submitPage')){
+                console.log('already exists')
+                return 
+            }else{
+                sessionStorage.setItem('submitPage',true)
+            }
+
         var counter = 0;
         Object.entries(selectedAnswers).map(([key, value]) => {
 
@@ -24,14 +34,28 @@ const SubmittedPage = () => {
         console.log('counter', counter)
         setMark(counter)
 
+
         const unparsedDetails = localStorage.getItem('details')
         const details = JSON.parse(unparsedDetails)
 
         // if(details.mark == 0 ){
         details.mark = counter
+        
+        const indexedTiming = new Date();
+        indexedTiming.setHours(19,54, 0, 0);
+        const time_duration = Math.floor((new Date().getTime() - indexedTiming.getTime()) / 1000);
+        
+        details.duration = time_duration;
+
+        const res = await axios.post('http://localhost:3000/submitDetails',details)
+         console.log('res',res)
 
         localStorage.setItem('details', JSON.stringify(details))
         // }
+
+    }
+
+    handleDetails()
 
     }, [])
 
@@ -71,6 +95,41 @@ const SubmittedPage = () => {
                         Time remaining for the leaderboard:
                         <span style={{ fontWeight: 'bold', color: '#FF5722', marginLeft: '5px' }}>{time}</span>
                     </p>
+
+                    <div className="mt-6 h-auto flex flex-col">
+                                            <h3 className="text-xl font-bold mb-4">Results</h3>
+                                            {questionArr.map((question, index) => (
+                                                <div
+                                                    key={index}
+                                                    className={`mb-4 p-4 rounded ${!selectedAnswers[index] ? "bg-gray-300" :
+                                                        selectedAnswers[index] === question.answer
+                                                            ? "bg-green-300"
+                                                            : "bg-red-300"
+                                                        }`}
+                                                >
+                                                    <p>
+                                                        <strong>Q{index + 1}:</strong> {question.question}
+                                                    </p>
+                                                    <p>
+                                                        <strong>Your Answer:</strong>{" "}
+                                                        {selectedAnswers[index]
+                                                            ? <> {selectedAnswers[index]} . {question.options[selectedAnswers[index]]}</>
+                                                            : "Not answered"}
+                                                    </p>
+                                                    <p>
+                                                        <strong>Correct Answer:</strong> {question.answer} . {question.options[question.answer]}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                            {/* <button
+                                                onClick={() => { //location.reload() }}
+                                                className="border-2 bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 mx-auto"
+                                            >
+                                                Refresh
+                                            </button> */}
+
+                                            <br /><br />
+                                        </div>
                 </div>
             }
         </div>

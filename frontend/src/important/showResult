@@ -1,0 +1,36 @@
+{showResults && (
+                                        <div className="mt-6 h-auto flex flex-col">
+                                            <h3 className="text-xl font-bold mb-4">Results</h3>
+                                            {questionArr.map((question, index) => (
+                                                <div
+                                                    key={index}
+                                                    className={`mb-4 p-4 rounded ${!selectedAnswers[index] ? "bg-gray-300" :
+                                                        selectedAnswers[index] === question.answer
+                                                            ? "bg-green-300"
+                                                            : "bg-red-300"
+                                                        }`}
+                                                >
+                                                    <p>
+                                                        <strong>Q{index + 1}:</strong> {question.question}
+                                                    </p>
+                                                    <p>
+                                                        <strong>Your Answer:</strong>{" "}
+                                                        {selectedAnswers[index]
+                                                            ? <> {selectedAnswers[index]} . {question.options[selectedAnswers[index]]}</>
+                                                            : "Not answered"}
+                                                    </p>
+                                                    <p>
+                                                        <strong>Correct Answer:</strong> {question.answer} . {question.options[question.answer]}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                            <button
+                                                onClick={() => { //location.reload() }}
+                                                className="border-2 bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 mx-auto"
+                                            >
+                                                Refresh
+                                            </button>
+
+                                            <br /><br />
+                                        </div>
+                                    )} 

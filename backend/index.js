@@ -12,6 +12,13 @@ connectToMongo();
 
 app.post('/submitDetails', async (req, res) => {
     const { name, rollno, gmail, branch, mark, duration } = req.body;
+ 
+    const user = await QuizUser.findOne({gmail});
+    if(user){
+         res.status(400).json({ error: "User already exists" });
+        return;
+    }
+
      console.log(req.body);
     try {
         const user = new QuizUser(req.body);

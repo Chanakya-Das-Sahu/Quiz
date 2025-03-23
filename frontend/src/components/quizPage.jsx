@@ -12,10 +12,7 @@ import MIN from '../JSON/MIN.json'
 const Questions = () => {
     const [progressWidth, setProgressWidth] = useState("100%");
     const [time, setTime] = useState('')
-    // const [selectedAnswers, setSelectedAnswers] = useState({});
     const [showResults, setShowResults] = useState(false);
-    // const [questionArr, setQuestionArr] = useState([])
-    // const [mark, setMark] = useState(0)
     const [questionPointer, setQuestionPointer] = useState(0)
     const [pointedQuestion, setPointedQuestion] = useState({})
 
@@ -29,10 +26,78 @@ const Questions = () => {
         MIN
     };
 
-    /*
-      MU22BTCSE012 
+
+    // Quiz Restriction Code 
+
+    const requestFullScreen = () => {
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+            document.documentElement.msRequestFullscreen();
+        }
+    };
+
+    // Detect full-screen exit and auto-submit
+    const handleFullScreenChange = () => {
+        if (!document.fullscreenElement) {
+            alert("You exited full-screen! Quiz will be submitted.");
+            setShowSubmittedPage(true);
+        }
+    };
+
+    // Detect tab switch or window blur
+    const handleVisibilityChange = () => {
+        if (document.hidden) {
+            alert("Tab switch detected! Quiz will be submitted.");
+            setShowSubmittedPage(true);
+        }
+    };
+
+    // Disable right-click and DevTools
+    const preventCheating = (e) => {
+        e.preventDefault();
+        alert("Right-click is disabled!");
+    };
+
+    const preventDevTools = (e) => {
+        if (e.key === "F12" || (e.ctrlKey && e.key === "u")) {
+            e.preventDefault();
+            alert("DevTools are disabled!");
+        }
+    };
+
+    useEffect(() => {
+        requestFullScreen(); // Open full-screen on mount
+        document.addEventListener("fullscreenchange", handleFullScreenChange);
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+        document.addEventListener("contextmenu", preventCheating);
+        document.addEventListener("keydown", preventDevTools);
+
+        return () => {
+            document.removeEventListener("fullscreenchange", handleFullScreenChange);
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+            document.removeEventListener("contextmenu", preventCheating);
+            document.removeEventListener("keydown", preventDevTools);
+        };
+    }, []);
+
+
+    // Quiz Restriction Code
+
+     useEffect(()=>{
+            if(sessionStorage.getItem('quizPage')){
+                setShowSubmittedPage(true)
+                console.log('already exists')
+                return
+            }else{
+                sessionStorage.setItem('quizPage',true)
+            }   
+        },[])
     
-    */
 
     const interval = useRef(null);
 
@@ -48,32 +113,16 @@ const Questions = () => {
                 const minutes = String(Math.floor((remainingTime / (1000 * 60)) % 60)).padStart(2, '0');
                 const seconds = String(Math.floor((remainingTime / 1000) % 60)).padStart(2, '0');
                 console.log('mew')
-                // console.log(`Remaining Time: ${hours}h ${minutes}m ${seconds}s`);
                 setTime(`${hours}:${minutes}:${seconds}`);
             } else {
-                // console.log("Time is up!");
-                // setShowLeaderBoard(true)
                 setShowSubmittedPage(true)
-                // clearInterval(interval)
-                //location.reload()
             }
         }, 1000)
 
         return (() => clearInterval(interval))
     }, [])
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setProgressWidth("0%"); // Shrink to 0% in 7 seconds
 
-    //         setTimeout(() => {
-    //             setProgressWidth("100%"); // Instantly reset
-    //             setReset(prev => !prev); // Toggle reset to trigger re-render
-    //         }, 7000); 
-    //     }, 7100); // Slightly more than 7s to avoid overlap
-
-    //     return () => clearInterval(interval);
-    // }, []);
 
     useEffect(() => {
         const local = localStorage.getItem('auth86');
@@ -104,108 +153,12 @@ const Questions = () => {
 
     };
 
-    // const timer = () => {
 
-    //     interval.current = setInterval(() => {
-
-    //         setQuestionPointer((prev)=>{
-    //            if(prev<=13){
-    //             console.log('prev+',prev)
-    //             return prev+1
-    //            }else{
-    //             console.log('prev complete',prev)
-    //             setShowSubmittedPage(true)
-    //             clearInterval(interval.current)
-    //             return prev
-    //            }
-    //         })
-
-
-
-    //     }, 3000);
-
-    //     return () => clearInterval(interval.current);
-
-
-    // }
-
-
-
-
-    // const retimer = () => {
-    //     clearInterval(interval.current)
-    //     setQuestionPointer((prev) => {
-    //         if(prev<=13){
-    //             console.log('prev+',prev)
-    //             return prev+1
-    //            }else{
-    //             console.log('prev complete',prev)
-    //             setShowSubmittedPage(true)
-    //             clearInterval(interval.current)
-    //             return prev
-    //            }
-    //         }
-    //     )
-    //     timer()
-
-    // }
-
-    // useEffect(() => {
-    //     if (questionArr.length > 0) {
-    //         setPointedQuestion(questionArr[questionPointer])
-    //     }
-
-    //     // console.log('questionArr eff',questionArr)
-    // }, [questionPointer])
-
-
-
-    // useEffect(()=>{
-    //     console.log('questionArr useEffect',questionArr)
-    // },[questionArr])
-
-    // useEffect(() => {
-    // console.log('questionPointer',questionPointer)
-    //    console.log('questionArr[questionPointer+1]',questionArr[questionPointer])
-    // console.log('questionPointer',questionPointer)
-    // const data = questionArr[questionPointer]
-    // if (data != 'undefined' & data != undefined) {
-    //     console.log('questionPointer', questionArr[questionPointer])
-    //     setPointedQuestion(questionArr[questionPointer])
-    // }
-
-    // }, [questionPointer])
-
-    // useEffect(()=>{
-    //     console.log('pointedQuestion',pointedQuestion)
-    // },[pointedQuestion])
 
     const handleOptionChange = (questionIndex, option) => {
         setSelectedAnswers({ ...selectedAnswers, [questionIndex]: option });
     };
 
-    // useEffect(()=>{
-    //   console.log("selectedAnswers",selectedAnswers)
-    // },[selectedAnswers])
-
-    // const calculateResults = () => {
-    //     var counter = 0;
-    //     Object.entries(selectedAnswers).map(([key, value]) => {
-
-    //         if (selectedAnswers[key] == questionArr[key].answer) {
-    //             console.log('selectedAnswer[key]', selectedAnswers[key])
-    //             console.log('questionArr[key].answer', questionArr[key].answer)
-    //             counter++
-    //         }
-    //     })
-    //     console.log('counter', counter)
-    //     setMark(counter)
-    //    const unparsedDetails = localStorage.getItem('details')
-    //    const details = JSON.parse(unparsedDetails)
-    //    details.mark = counter 
-
-    //    localStorage.setItem('details',JSON.stringify(details))
-    // };
 
     return (
         <>
@@ -237,8 +190,6 @@ const Questions = () => {
 
             <div className={`max-w-xl mx-auto p-6 h-screen`}>
                 <div className={`flex flex-col h-auto ${showResults ? 'hidden' : ' '}`}>
-                    {/* {questionArr.map((question, index) => ( */}
-                    {/* {questionArr[questionN]} */}
                     <div key={questionPointer} className="mb-6 bg-white p-4 shadow rounded">
                         <h2 className="font-bold text-lg mb-4">
                             Q{questionPointer + 1}: {pointedQuestion.question}
@@ -309,42 +260,6 @@ const Questions = () => {
 
                 </div>
 
-                {/* {showResults && (
-                                        <div className="mt-6 h-auto flex flex-col">
-                                            <h3 className="text-xl font-bold mb-4">Results</h3>
-                                            {questionArr.map((question, index) => (
-                                                <div
-                                                    key={index}
-                                                    className={`mb-4 p-4 rounded ${!selectedAnswers[index] ? "bg-gray-300" :
-                                                        selectedAnswers[index] === question.answer
-                                                            ? "bg-green-300"
-                                                            : "bg-red-300"
-                                                        }`}
-                                                >
-                                                    <p>
-                                                        <strong>Q{index + 1}:</strong> {question.question}
-                                                    </p>
-                                                    <p>
-                                                        <strong>Your Answer:</strong>{" "}
-                                                        {selectedAnswers[index]
-                                                            ? <> {selectedAnswers[index]} . {question.options[selectedAnswers[index]]}</>
-                                                            : "Not answered"}
-                                                    </p>
-                                                    <p>
-                                                        <strong>Correct Answer:</strong> {question.answer} . {question.options[question.answer]}
-                                                    </p>
-                                                </div>
-                                            ))}
-                                            <button
-                                                onClick={() => { //location.reload() }}
-                                                className="border-2 bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 mx-auto"
-                                            >
-                                                Refresh
-                                            </button>
-
-                                            <br /><br />
-                                        </div>
-                                    )} */}
             </div>
         </>
     )
