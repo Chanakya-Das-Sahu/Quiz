@@ -42,7 +42,7 @@ const SubmittedPage = () => {
         details.mark = counter
         
         const indexedTiming = new Date();
-        indexedTiming.setHours(19,54, 0, 0);
+        indexedTiming.setHours(21,0, 0, 0);
         const time_duration = Math.floor((new Date().getTime() - indexedTiming.getTime()) / 1000);
         
         details.duration = time_duration;
