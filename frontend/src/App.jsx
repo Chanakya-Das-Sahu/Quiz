@@ -5,15 +5,24 @@ import Home from './components/home.jsx'
 // import Register from './register.jsx'
 import QuizIntro from './components/quizIntro.jsx'
 import QuizPage from './components/quizPage.jsx'
+import LeaderBoard from './components/leaderBoard.jsx'
+import SubmittedPage from './components/submittedPage.jsx'
 const context = createContext()
 const App = () => {
   const [showLoginPage, setShowLoginPage] = useState(false)
   const [showLoginButton, setShowLoginButton] = useState(true)
+  const [showLeaderBoard, setShowLeaderBoard] = useState(false)
   const [hasTimeBeen, setHasTimeBeen] = useState(false)
+  const [showSubmittedPage, setShowSubmittedPage] = useState(false)
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [leaderBoardTiming, setLeaderBoardTiming] = useState('')
+  const [questionArr, setQuestionArr] = useState([])
   const [timing, setTiming] = useState()
 
   const renderElement = () => {
     if (showLoginButton) return <Home />
+    if (showSubmittedPage) return <SubmittedPage />
+    if (showLeaderBoard) return <LeaderBoard />
     if (!showLoginButton && hasTimeBeen) return <QuizPage />
     if (!showLoginButton) return <QuizIntro />
   }
@@ -22,17 +31,24 @@ const App = () => {
 
 
   useEffect(() => {
-    const today8PM = new Date();
-    today8PM.setHours(11, 16, 0, 0);
+    const quizTime = new Date();
+    quizTime.setHours(14, 51 ,10, 0);
 
-    setTiming(today8PM)
+    const leaderBoardTime = new Date(quizTime.getTime() + 10 * 60 * 1000);
+    setLeaderBoardTiming(leaderBoardTime)
+    setTiming(quizTime)
 
     const interval = setInterval(() => {
       const now = new Date()
-      if (now >= today8PM) {
+      if (now >= quizTime) {
         setHasTimeBeen(now)
+      }
+
+      if (now >= leaderBoardTime) {
+        // setShowSubmittedPage(true)
         clearInterval(interval)
       }
+
     }, 1000)
 
     return () => clearInterval(interval)
@@ -49,7 +65,15 @@ const App = () => {
           showLoginButton,
           setShowLoginButton,
           timing,
-          setTiming
+          setTiming,
+          showLeaderBoard,
+          setShowLeaderBoard,
+          setShowSubmittedPage,
+          leaderBoardTiming,
+          selectedAnswers,
+          setSelectedAnswers,
+          questionArr,
+          setQuestionArr
         }}>
 
           <Routes>

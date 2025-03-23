@@ -1,112 +1,181 @@
-import React from 'react'
-import { useState } from 'react'
-import { useContext } from 'react';
-import { context } from '../App.jsx'
-// import { useNavigate } from 'react-router-dom';
-import axios from 'axios'
+import React, { useState } from "react";
+import axios from "axios";
+import { useContext } from "react";
+import { context } from "../App";
+
 const Register = () => {
-    const [formData, setFormData] = useState({id:'', j_username: '', j_password: '' });
+    const [details, setDetails] = useState({
+        name: "",
+        rollno: "",
+        gmail: "",
+        branch: "",
+        mark: "0",
+        duration: ""
+    });
+
+    const [otp, setOtp] = useState({
+        generated: "",
+        input: "",
+    });
+
+    const { setShowLoginPage } = useContext(context)
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
-    // const navigate = useNavigate();
-    const { showLoginPage, setShowLoginPage , setShowLoginButton } = useContext(context)
-    const handleAuthAPI = async () => {
-    
-         try {
-            console.log("charu")
-            setLoading(true);
-            setError('');
-            const res = await axios.post('https://era-login.vercel.app/login', {j_username:formData.j_username,j_password:formData.j_password});
-            console.log('res', res.data)
+    const [otpSent, setOtpSent] = useState(false);
 
-            if (res.data.msg) {
-                // console.log('mew')
-               const lid = formData.id.match(/^[A-Za-z0-9]{6}([A-Za-z]+)[0-9]+$/)[1].toUpperCase()
-               console.log('lid',lid)
-                localStorage.setItem('auth86',lid)
-                setShowLoginButton(false)
-            }
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setDetails((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
 
-            if (res.data.alert) {
-                console.log('how')
-                setError('Invalid Credentials or Server Load')
-            }
-        } catch (err) {
-            setError('Login failed. Please try again.');
+    const handleOTPGenerate = async () => {
+        if (!details.gmail || !details.rollno || !details.name) {
+            alert("Please fill all fields");
+            return;
+        }
+
+        let regex = /^MU\d{2}BT([A-Za-z]+)H?\d{3}$/;
+        let match = rollno.match(regex);
+        const branchName = match ? match[1].replace(/H$/, '') : rollno;
+        const branch = branchName.toUpperCase();
+        // const branch = details.rollno.slice(6, 9).toUpperCase();
+        setDetails((prev) => ({ ...prev, branch }));
+        setLoading(true);
+
+        try {
+            const response = await axios.post("https://techfest-participants.vercel.app/api/generateOTP", { gmail: details.gmail });
+            setOtp((prev) => ({ ...prev, generated: response.data.otp }));
+            setOtpSent(true);
+        } catch (error) {
+            alert("Failed to send OTP");
         } finally {
             setLoading(false);
         }
     };
 
+    const handleSubmit = () => {
+        if (otp.generated === otp.input) {
+            localStorage.setItem("auth86", details.branch);
+            localStorage.setItem('details', JSON.stringify(details))
+            // alert("Registration successful");
+            location.reload()
+
+            setShowLoginPage(false)
+            //location.reload()
+        } else {
+            alert("Invalid OTP");
+        }
+    };
+
     return (
-        // <div className="flex justify-center items-center h-screen bg-red-300">
-        // <div className="absolute inset-0 flex justify-center items-center bg-gray-100">
-
-        <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 mx-4 w-full max-w-80 h-96 p-6 rounded-lg shadow-lg bg-white">
-            <button
-                onClick={() => { setShowLoginPage(false) }}
-                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+        <div className="register-container absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg rounded-lg p-6 w-full h-96 max-w-96">
+            <div
+                className="close-icon text-red-500 text-xl font-bold cursor-pointer float-right"
+                onClick={() => setShowLoginPage(false)}
             >
-                ✖
-            </button>
-            <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Login</h2>
-            {error && <p className="text-red-500 text-center mb-4">{error}</p>}
-            <form
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    handleAuthAPI();
-                }}
-            >
-                 <div className="mb-4">
-                    <label htmlFor="username" className="block text-sm font-medium text-gray-600 mb-2">ID</label>
-                    <input
-                        type="text"
-                        id="id"
-                        name="id"
-                        value={formData.id}
-                        onChange={(e) => setFormData({ ...formData, id: e.target.value })}
-                        className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-                        required
-                    />
-                </div>
-
-                <div className="mb-4">
-                    <label htmlFor="username" className="block text-sm font-medium text-gray-600 mb-2">Username</label>
-                    <input
-                        type="text"
-                        id="username"
-                        name="j_username"
-                        value={formData.j_username}
-                        onChange={(e) => setFormData({ ...formData, j_username: e.target.value })}
-                        className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="password" className="block text-sm font-medium text-gray-600 mb-2">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="j_password"
-                        value={formData.j_password}
-                        onChange={(e) => setFormData({ ...formData, j_password: e.target.value })}
-                        className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-                        required
-                    />
-                </div>
+                &times;
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Register</h2>
+            <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={details.name}
+                onChange={handleInputChange}
+                className="w-full p-2 mb-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+                type="text"
+                name="rollno"
+                placeholder="Roll Number"
+                value={details.rollno}
+                onChange={handleInputChange}
+                className="w-full p-2 mb-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+                type="email"
+                name="gmail"
+                placeholder="Gmail"
+                value={details.gmail}
+                onChange={handleInputChange}
+                disabled={otpSent}
+                className={`w-full p-2 mb-3 border rounded focus:outline-none ${otpSent ? "bg-gray-200 border-gray-300" : "border-gray-300 focus:ring-2 focus:ring-blue-500"
+                    }`}
+            />
+            {!otpSent ? (
                 <button
-                    type="submit"
-                    className={`w-full py-2 text-white text-sm font-medium rounded-lg bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 ${loading ? 'opacity-50 cursor-not-allowed' : ''
-                        }`}
+                    onClick={handleOTPGenerate}
                     disabled={loading}
-                    onClick={handleAuthAPI}
+                    className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 disabled:bg-gray-400"
                 >
-                    {loading ? 'Logging in...' : 'Login'}
+                    {loading ? <img src="/loading.gif" alt="Loading" className="h-5 mx-auto" /> : "Send OTP"}
                 </button>
-            </form>
+            ) : (
+                <>
+                    <input
+                        type="text"
+                        placeholder="Enter OTP"
+                        value={otp.input}
+                        onChange={(e) => setOtp((prev) => ({ ...prev, input: e.target.value }))}
+                        className="w-full p-2 mb-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button
+                        onClick={handleSubmit}
+                        className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
+                    >
+                        Submit
+                    </button>
+                </>
+            )}
         </div>
-        // </div>
     );
 };
 
 export default Register;
+
+/*
+
+Generate Register Page :
+
+state to create :
+
+details : {name,rollno,gmail,branch}
+otp : {generated,input}
+
+create input fields 
+name , rollno , gmail 
+send otp button beneth 
+
+click on the send otp button will call function named handleOTP Genearate will store all values to state object 
+not explicit input for branch will be extracted from roll no which be like this mu22btcse012 
+
+that will trigger an api with post method with axios containing payload gmail 
+
+during this render loading image inside of send otp button and removes the text send otp  
+when api responses back with res.data.otp would be stored in otp.generated
+
+
+stop loading 
+
+freeze gmail input field 
+
+remove send otp button and create input field of otp 
+create submit button beneath  
+on click of button will trigger function named handleSubmit match both of the otp generated and input and 
+
+if matches :
+
+in localStorage store CSE means whatever branch in uppercase with key 'auth86'
+
+if not : 
+
+alert invalid otp
+
+
+other things : 
+
+also add cross icon on top right corner 
+
+*/
