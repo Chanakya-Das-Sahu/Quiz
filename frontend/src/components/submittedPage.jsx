@@ -47,7 +47,7 @@ const SubmittedPage = () => {
         
         details.duration = time_duration;
 
-        const res = await axios.post('http://localhost:3000/submitDetails',details)
+        const res = await axios.post('https://quiz-beta-rust.vercel.app/submitDetails',details)
          console.log('res',res)
 
         localStorage.setItem('details', JSON.stringify(details))
